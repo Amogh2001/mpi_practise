@@ -1,0 +1,9 @@
+all: program
+
+program: MpiVector.o 
+	mpiCC MpiVector.o program
+
+MpiVector.o: MpiVector.cpp MpiVector.hpp
+	mpiCC -c -O MpiVector.cpp
+
+	
